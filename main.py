@@ -5,4 +5,5 @@ available_sugar = 3
 
 #Define a function to check if you have enough ingredients to make a cake.
 def check_kitchen_stock():
-    pass
+    total_items = available_eggs +  available_flour + available_sugar
+    
