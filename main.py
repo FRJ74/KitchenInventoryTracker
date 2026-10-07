@@ -6,4 +6,16 @@ available_sugar = 3
 #Define a function to check if you have enough ingredients to make a cake.
 def check_kitchen_stock():
     total_items = available_eggs +  available_flour + available_sugar
-    
+    print(f'The kitchen has {total_items} total items:')
+    print(f'- {available_eggs} eggs')
+    print(f'- {available_flour} flour')
+    print(f'- {available_sugar} sugar')
+
+check_kitchen_stock() 
+
+def use_eggs(available_eggs, eggs_to_use):
+    if eggs_to_use > available_eggs:
+        print("The kitchen does not have enough eggs.")
+        return available_eggs
+    print(f'{eggs_to_use} egg(s) used out of {available_eggs} available.')
+    return available_eggs - eggs_to_use
